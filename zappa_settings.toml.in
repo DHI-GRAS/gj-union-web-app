@@ -1,0 +1,10 @@
+[development]
+app_function = "gj_union.flask_api"
+profile_name = "default"
+project_name = "gj-union"
+runtime = "python3.6"
+s3_bucket = "zappa-gj-union"
+
+[development.vpc_config]
+SubnetIds = []
+SecurityGroupIds = []
