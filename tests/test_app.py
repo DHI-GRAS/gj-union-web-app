@@ -27,9 +27,15 @@ def response_json():
 
 
 def test_post(client, post_json, response_json):
-    response = client.post('/', json=post_json)
+    response = client.post('/union', json=post_json)
     print(response)
     assert response.status_code == 200
     assert 'type' in response.json
     assert 'coordinates' in response.json
     assert response.json == response_json
+
+
+def test_touch(client):
+    response = client.get('/')
+    print(response)
+    assert response.status_code == 200

@@ -1,5 +1,5 @@
 [development]
-app_function = "gj_union.flask_api"
+app_function = "gj_union.app.app"
 profile_name = "default"
 project_name = "gj-union"
 runtime = "python3.6"

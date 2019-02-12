@@ -16,7 +16,12 @@ def _parse_geometry_string(gs):
         )
 
 
-@bp.route('/', methods=['POST'])
+@bp.route('/')
+def index():
+    return 'Yay for microservices!', 200
+
+
+@bp.route('/union', methods=['POST'])
 def main():
     content = request.json
     if content is None or 'geometries' not in content:
