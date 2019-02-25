@@ -8,3 +8,15 @@ s3_bucket = "zappa-gj-union"
 [development.vpc_config]
 SubnetIds = []
 SecurityGroupIds = []
+
+[production]
+extends = "development"
+
+# WARNING: using a cache cluster incurs additional costs (not covered by AWS free tier)
+cache_cluster_enabled = true
+cache_cluster_size = 0.5
+cache_cluster_ttl = 600
+
+debug = false
+log_level = "WARNING"
+xray_tracing = true
